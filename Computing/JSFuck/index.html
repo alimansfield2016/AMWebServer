@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<div class="input">
+  <input id="input"></input>
+  <button id="encode" width="100" height="30">Encode</button>
+  <input id="eval" type="checkbox"></input>
+  <label for="eval">Eval Source</label>
+</div>
+<br>
+<textarea id="output"></textarea>
+<a href="#" id="run">run</a>
+<script src="jsFuck.js"></script>
+<script>
+
+
+    function $(id){
+      return document.getElementById(id);
+    }
+
+    function encode(){
+      var output = JSFuck.encode($("input").value, $("eval").checked);
+      $("output").value = output;
+      // $("stats").innerHTML = output.length + " chars";
+    }
+
+     $("encode").onclick = encode;
+     $("eval").onchange = encode;
+
+    encode();
+
+    $("run").onclick = function(){
+      value = eval($("output").value);
+
+      if (!$("eval").checked){
+        alert('"' + value + '"');
+      }
+      return false;
+    };
+  </script>
+
+</html>

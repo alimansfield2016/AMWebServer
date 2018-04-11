@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<title>Optical Character Recognition</title>
+
+<head>
+  <style>
+  .button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  </style>
+  <div>
+    <button id="clear_canvas" class="button">CLEAR</button>
+    <button id="train_epoch" class="button">TRAIN</button>
+    <button id="test_epoch" class="button">TEST</button>
+    <button id="guess_canvas" class="button">GUESS</button>
+
+
+  </div>
+  <div>
+    <button id="train_20" class="button">TRAIN 20</button>
+    <button id="train_50" class="button">TRAIN 50</button>
+    <button id="train_100" class="button">TRAIN 100</button>
+
+  </div>
+  <div>
+    <button id="save_nn" class="button">SAVE</button>
+    <button id="load_nn" class="button">LOAD</button>
+
+  </div>
+
+</head>
+<body style="background-color:lightgray;">
+
+  <script src="/Libraries/p5js/p5.min.js"></script>
+  <script src="/Libraries/p5js/p5.dom.js"></script>
+  <script src="/Libraries/neuralNet/neuralNet.lib.js"></script>
+  <script src="/Libraries/neuralNet/Matrix.js"></script>
+  <script src="loadbytes.js"></script>
+  <script src="cr.js"></script>
+</html>
